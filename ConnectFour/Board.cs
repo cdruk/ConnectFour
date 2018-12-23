@@ -71,7 +71,7 @@ namespace ConnectFour {
          * @param int column - into which column was the next piece dropped
          * @return Board - new board configuration after the move was made
          */
-        public Board makeMove(bool who, int column) {
+        public Board MakeMove(bool who, int column) {
             Board newBoard = new Board(board);
             int row = 0;
             while (board[row, column] != Cell.EMPTY && row < NR_ROWS) {

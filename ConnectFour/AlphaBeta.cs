@@ -16,7 +16,7 @@
                 if (player == Player.MAX) {
                     for (int col = 0; col < Board.NR_COLS; ++col) {
                         if (board.canMove(col)) {
-                            Board nextPos = board.makeMove(Player.MAX, col);
+                            Board nextPos = board.MakeMove(Player.MAX, col);
                             double thisVal = Value(nextPos, depth - 1, alfa, beta, opponent);
                             if (thisVal > alfa) {
                                 alfa = thisVal;
@@ -31,7 +31,7 @@
                   {
                     for (int col = 0; col < Board.NR_COLS; ++col) {
                         if (board.canMove(col)) {
-                            Board nextPos = board.makeMove(Player.MIN, col);
+                            Board nextPos = board.MakeMove(Player.MIN, col);
                             double thisVal = Value(nextPos, depth - 1, alfa, beta, opponent);
                             if (thisVal < beta) {
                                 beta = thisVal;
